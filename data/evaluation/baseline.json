@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-19T07:30:02.710004",
+  "timestamp": "2026-08-19T09:11:43.135073+00:00",
   "classification": {},
   "rag": {
     "k": 5,
@@ -160,7 +160,7 @@
     ]
   },
   "tools": {
-    "tool_selection_accuracy": 1.0,
+    "tool_selection_accuracy": 0.875,
     "tool_argument_accuracy": 0.5,
     "total_cases": 8,
     "details": [
@@ -168,14 +168,14 @@
         "id": "tool_001",
         "request": "What is the current status of order 1001?",
         "expected_tool": "get_order",
-        "predicted_tool": "get_order",
+        "predicted_tool": "get_payment_status",
         "expected_arguments": {
           "order_id": 1001
         },
         "predicted_arguments": {
           "order_id": "1001"
         },
-        "tool_correct": true,
+        "tool_correct": false,
         "arguments_correct": false
       },
       {
@@ -348,10 +348,10 @@
     "error_count": 8,
     "error_rate": 1.0,
     "latency": {
-      "average_seconds": 8.230467537499976,
-      "min_seconds": 7.981288599999971,
-      "max_seconds": 8.666384799999832,
-      "p95_seconds": 8.666384799999832
+      "average_seconds": 9.046685275000073,
+      "min_seconds": 8.239382400000977,
+      "max_seconds": 12.285946500000136,
+      "p95_seconds": 12.285946500000136
     },
     "tokens": {
       "input": 0,
@@ -396,56 +396,56 @@
     "details": [
       {
         "id": "agent_001",
-        "latency_seconds": 8.190625599999748,
+        "latency_seconds": 12.285946500000136,
         "input_tokens": 0,
         "output_tokens": 0,
         "error": "Operation failed after 3 retries."
       },
       {
         "id": "agent_002",
-        "latency_seconds": 8.192227900000034,
+        "latency_seconds": 8.480825200000254,
         "input_tokens": 0,
         "output_tokens": 0,
         "error": "Operation failed after 3 retries."
       },
       {
         "id": "agent_003",
-        "latency_seconds": 8.109958800000186,
+        "latency_seconds": 8.252087299999403,
         "input_tokens": 0,
         "output_tokens": 0,
         "error": "Operation failed after 3 retries."
       },
       {
         "id": "agent_004",
-        "latency_seconds": 8.065607200000159,
+        "latency_seconds": 9.104154300001028,
         "input_tokens": 0,
         "output_tokens": 0,
         "error": "Operation failed after 3 retries."
       },
       {
         "id": "agent_005",
-        "latency_seconds": 7.981288599999971,
+        "latency_seconds": 9.201283799999146,
         "input_tokens": 0,
         "output_tokens": 0,
         "error": "Operation failed after 3 retries."
       },
       {
         "id": "agent_006",
-        "latency_seconds": 8.178273999999874,
+        "latency_seconds": 8.556519499999922,
         "input_tokens": 0,
         "output_tokens": 0,
         "error": "Operation failed after 3 retries."
       },
       {
         "id": "agent_007",
-        "latency_seconds": 8.666384799999832,
+        "latency_seconds": 8.239382400000977,
         "input_tokens": 0,
         "output_tokens": 0,
         "error": "Operation failed after 3 retries."
       },
       {
         "id": "agent_008",
-        "latency_seconds": 8.459373400000004,
+        "latency_seconds": 8.253283199999714,
         "input_tokens": 0,
         "output_tokens": 0,
         "error": "Operation failed after 3 retries."

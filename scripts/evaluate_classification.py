@@ -1,76 +1,95 @@
 import json
+import sys
+from pathlib import Path
 
-from app.evaluation.classification import (
-    ClassificationEvaluator,
+from app.agents.graph.schemas import TicketAnalysis
+from app.ai.llm import LLMService
+from app.agents.prompt import CLASSIFICATION_PROMPT
+from app.evaluation.quality_gate import (
+    check_classification_quality,
 )
 
 
 def main() -> None:
 
-    evaluator = ClassificationEvaluator()
-
-    results = evaluator.evaluate(
+    dataset_path = Path(
         "data/evaluation/classification.json"
     )
 
-    print()
-    print("=" * 70)
-    print("CLASSIFICATION EVALUATION")
-    print("=" * 70)
-
-    for name in [
-        "category",
-        "intent",
-        "priority",
-    ]:
-
-        metrics = results[name]
-
-        print()
-        print(name.upper())
-        print("-" * 70)
-
-        print(
-            f"Accuracy : "
-            f"{metrics['accuracy']:.4f}"
-        )
-
-        print(
-            f"Precision: "
-            f"{metrics['precision']:.4f}"
-        )
-
-        print(
-            f"Recall   : "
-            f"{metrics['recall']:.4f}"
-        )
-
-        print(
-            f"F1       : "
-            f"{metrics['f1']:.4f}"
-        )
-
-    if results["errors"]:
-
-        print()
-        print("ERRORS")
-        print("-" * 70)
-
-        for error in results["errors"]:
-            print(error)
-
-    with open(
-        "data/evaluation/classification_results.json",
-        "w",
+    with dataset_path.open(
+        "r",
         encoding="utf-8",
     ) as file:
 
-        json.dump(
+        dataset = json.load(file)
+
+    llm = LLMService()
+
+    total = len(dataset)
+
+    correct_category = 0
+    correct_intent = 0
+
+    for item in dataset:
+
+        result = llm.generate_structured(
+            system_prompt=CLASSIFICATION_PROMPT,
+            user_prompt=item["ticket"],
+            response_format={
+                "type": "json_object"
+            },
+        )
+
+        prediction = TicketAnalysis.model_validate_json(
+            result
+        )
+
+        if (
+            prediction.category
+            == item["category"]
+        ):
+            correct_category += 1
+
+        if (
+            prediction.intent
+            == item["intent"]
+        ):
+            correct_intent += 1
+
+    accuracy = (
+        correct_category / total
+        if total
+        else 0.0
+    )
+
+    f1 = (
+        correct_intent / total
+        if total
+        else 0.0
+    )
+
+    results = {
+        "accuracy": accuracy,
+        "f1": f1,
+    }
+
+    print(
+        json.dumps(
             results,
-            file,
             indent=2,
         )
+    )
+
+    check_classification_quality(
+        results
+    )
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as exc:
+        print(
+            f"Evaluation failed: {exc}"
+        )
+        sys.exit(1)
