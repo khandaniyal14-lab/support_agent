@@ -1,0 +1,72 @@
+[
+  {
+    "id": "classification_001",
+    "ticket": "I was charged twice for the same order.",
+    "category": "billing",
+    "intent": "duplicate_charge",
+    "priority": "high"
+  },
+  {
+    "id": "classification_002",
+    "ticket": "My card was declined when I tried to pay.",
+    "category": "billing",
+    "intent": "payment_failed",
+    "priority": "high"
+  },
+  {
+    "id": "classification_003",
+    "ticket": "I want to cancel my order before it ships.",
+    "category": "order",
+    "intent": "order_cancellation",
+    "priority": "medium"
+  },
+  {
+    "id": "classification_004",
+    "ticket": "My order arrived damaged.",
+    "category": "shipping",
+    "intent": "damaged_order",
+    "priority": "high"
+  },
+  {
+    "id": "classification_005",
+    "ticket": "I forgot my password and cannot log in.",
+    "category": "account",
+    "intent": "login_problem",
+    "priority": "medium"
+  },
+  {
+    "id": "classification_006",
+    "ticket": "How long does a refund take?",
+    "category": "billing",
+    "intent": "refund_status",
+    "priority": "medium"
+  },
+  {
+    "id": "classification_007",
+    "ticket": "Can I return an item I bought last week?",
+    "category": "returns",
+    "intent": "return_request",
+    "priority": "medium"
+  },
+  {
+    "id": "classification_008",
+    "ticket": "My package has not arrived yet.",
+    "category": "shipping",
+    "intent": "delivery_delay",
+    "priority": "high"
+  },
+  {
+    "id": "classification_009",
+    "ticket": "Someone accessed my account without permission.",
+    "category": "account",
+    "intent": "account_security",
+    "priority": "urgent"
+  },
+  {
+    "id": "classification_010",
+    "ticket": "The product I received is defective.",
+    "category": "product",
+    "intent": "defective_product",
+    "priority": "high"
+  }
+]

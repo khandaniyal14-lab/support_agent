@@ -1,0 +1,77 @@
+{
+  "total_requests": 8,
+  "successful_requests": 8,
+  "error_count": 0,
+  "error_rate": 0.0,
+  "latency": {
+    "average_seconds": 3.164471937499684,
+    "min_seconds": 2.0303886999990937,
+    "max_seconds": 4.795637400000487,
+    "p95_seconds": 4.795637400000487
+  },
+  "tokens": {
+    "input": 95,
+    "output": 412,
+    "total": 507
+  },
+  "estimated_cost": 0.0006655,
+  "errors": [],
+  "details": [
+    {
+      "id": "agent_001",
+      "latency_seconds": 4.795637400000487,
+      "input_tokens": 12,
+      "output_tokens": 78,
+      "error": null
+    },
+    {
+      "id": "agent_002",
+      "latency_seconds": 3.59352410000065,
+      "input_tokens": 8,
+      "output_tokens": 133,
+      "error": null
+    },
+    {
+      "id": "agent_003",
+      "latency_seconds": 2.0303886999990937,
+      "input_tokens": 12,
+      "output_tokens": 16,
+      "error": null
+    },
+    {
+      "id": "agent_004",
+      "latency_seconds": 2.9407398000003013,
+      "input_tokens": 5,
+      "output_tokens": 57,
+      "error": null
+    },
+    {
+      "id": "agent_005",
+      "latency_seconds": 3.005905999998504,
+      "input_tokens": 9,
+      "output_tokens": 8,
+      "error": null
+    },
+    {
+      "id": "agent_006",
+      "latency_seconds": 2.774727099998927,
+      "input_tokens": 16,
+      "output_tokens": 48,
+      "error": null
+    },
+    {
+      "id": "agent_007",
+      "latency_seconds": 2.8555512000002636,
+      "input_tokens": 17,
+      "output_tokens": 64,
+      "error": null
+    },
+    {
+      "id": "agent_008",
+      "latency_seconds": 3.319301199999245,
+      "input_tokens": 16,
+      "output_tokens": 8,
+      "error": null
+    }
+  ]
+}

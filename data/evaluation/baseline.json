@@ -1,0 +1,455 @@
+{
+  "timestamp": "2026-08-19T07:30:02.710004",
+  "classification": {},
+  "rag": {
+    "k": 5,
+    "recall_at_k": 1.0,
+    "mrr": 0.825,
+    "ndcg_at_k": 0.8696164093615606,
+    "details": [
+      {
+        "id": "rag_001",
+        "question": "How long do I have to request a refund?",
+        "expected_source": "refund-policy.md",
+        "retrieved_sources": [
+          "refund-policy.md",
+          "refund-policy.md",
+          "refund-policy.md",
+          "refunds.md",
+          "refunds.md"
+        ],
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      {
+        "id": "rag_002",
+        "question": "I was charged twice for my order.",
+        "expected_source": "payments.md",
+        "retrieved_sources": [
+          "payments.md",
+          "payment-failed.md",
+          "payment-policy.md",
+          "payment-policy.md",
+          "shipping.md"
+        ],
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      {
+        "id": "rag_003",
+        "question": "My payment failed.",
+        "expected_source": "payment-failed.md",
+        "retrieved_sources": [
+          "payments.md",
+          "payment-failed.md",
+          "payment-policy.md",
+          "payment-failed.md",
+          "payment-failed.md"
+        ],
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 0.5,
+        "ndcg_at_k": 0.6797310500037655
+      },
+      {
+        "id": "rag_004",
+        "question": "Can I cancel an order after it has shipped?",
+        "expected_source": "cancellation-policy.md",
+        "retrieved_sources": [
+          "cancellation-policy.md",
+          "cancellation-policy.md",
+          "cancellation-policy.md",
+          "cancellation-policy.md",
+          "cancellation-policy.md"
+        ],
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      {
+        "id": "rag_005",
+        "question": "I cannot log into my account.",
+        "expected_source": "login-problems.md",
+        "retrieved_sources": [
+          "login-problems.md",
+          "login-problems.md",
+          "login-problems.md",
+          "login-problems.md",
+          "login-problems.md"
+        ],
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      {
+        "id": "rag_006",
+        "question": "How long does a card refund take?",
+        "expected_source": "refund-policy.md",
+        "retrieved_sources": [
+          "refund-policy.md",
+          "refund-policy.md",
+          "refunds.md",
+          "refund-policy.md",
+          "refunds.md"
+        ],
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg_at_k": 0.9674679834891693
+      },
+      {
+        "id": "rag_007",
+        "question": "What happens if my package arrives damaged?",
+        "expected_source": "return-policy.md",
+        "retrieved_sources": [
+          "shipping.md",
+          "refunds.md",
+          "shipping.md",
+          "return-policy.md",
+          "warranty-policy.md"
+        ],
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 0.25,
+        "ndcg_at_k": 0.43067655807339306
+      },
+      {
+        "id": "rag_008",
+        "question": "My card was declined during checkout.",
+        "expected_source": "payment-failed.md",
+        "retrieved_sources": [
+          "payment-failed.md",
+          "payments.md",
+          "payment-failed.md",
+          "payment-failed.md",
+          "refunds.md"
+        ],
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg_at_k": 0.9060254355346823
+      },
+      {
+        "id": "rag_009",
+        "question": "How can I cancel my order?",
+        "expected_source": "cancellation-policy.md",
+        "retrieved_sources": [
+          "cancellation-policy.md",
+          "cancellation-policy.md",
+          "cancellation-policy.md",
+          "cancellation-policy.md",
+          "return-policy.md"
+        ],
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      {
+        "id": "rag_010",
+        "question": "I forgot my password.",
+        "expected_source": "login-problems.md",
+        "retrieved_sources": [
+          "accounts.md",
+          "login-problems.md",
+          "login-problems.md",
+          "accounts.md",
+          "login-problems.md"
+        ],
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 0.5,
+        "ndcg_at_k": 0.7122630665145961
+      }
+    ]
+  },
+  "tools": {
+    "tool_selection_accuracy": 1.0,
+    "tool_argument_accuracy": 0.5,
+    "total_cases": 8,
+    "details": [
+      {
+        "id": "tool_001",
+        "request": "What is the current status of order 1001?",
+        "expected_tool": "get_order",
+        "predicted_tool": "get_order",
+        "expected_arguments": {
+          "order_id": 1001
+        },
+        "predicted_arguments": {
+          "order_id": "1001"
+        },
+        "tool_correct": true,
+        "arguments_correct": false
+      },
+      {
+        "id": "tool_002",
+        "request": "Can you check the payment status for order 1002?",
+        "expected_tool": "get_payment_status",
+        "predicted_tool": "get_payment_status",
+        "expected_arguments": {
+          "order_id": 1002
+        },
+        "predicted_arguments": {
+          "order_id": "1002"
+        },
+        "tool_correct": true,
+        "arguments_correct": false
+      },
+      {
+        "id": "tool_003",
+        "request": "Show me my previous support tickets.",
+        "expected_tool": "get_previous_tickets",
+        "predicted_tool": "get_previous_tickets",
+        "expected_arguments": {},
+        "predicted_arguments": {},
+        "tool_correct": true,
+        "arguments_correct": true
+      },
+      {
+        "id": "tool_004",
+        "request": "Can you check my customer information?",
+        "expected_tool": "get_customer",
+        "predicted_tool": "get_customer",
+        "expected_arguments": {},
+        "predicted_arguments": {},
+        "tool_correct": true,
+        "arguments_correct": true
+      },
+      {
+        "id": "tool_005",
+        "request": "Please check the refund status for order 1005.",
+        "expected_tool": "check_refund_status",
+        "predicted_tool": "check_refund_status",
+        "expected_arguments": {
+          "order_id": 1005
+        },
+        "predicted_arguments": {
+          "order_id": "1005"
+        },
+        "tool_correct": true,
+        "arguments_correct": false
+      },
+      {
+        "id": "tool_006",
+        "request": "What does the refund policy say about returns?",
+        "expected_tool": "search_knowledge_base",
+        "predicted_tool": "search_knowledge_base",
+        "expected_arguments": {
+          "query": "refund policy returns"
+        },
+        "predicted_arguments": {
+          "query": "refund policy returns"
+        },
+        "tool_correct": true,
+        "arguments_correct": true
+      },
+      {
+        "id": "tool_007",
+        "request": "Look up order 2045 for me.",
+        "expected_tool": "get_order",
+        "predicted_tool": "get_order",
+        "expected_arguments": {
+          "order_id": 2045
+        },
+        "predicted_arguments": {
+          "order_id": "2045"
+        },
+        "tool_correct": true,
+        "arguments_correct": false
+      },
+      {
+        "id": "tool_008",
+        "request": "Check whether order 3001 has been refunded.",
+        "expected_tool": "check_refund_status",
+        "predicted_tool": "check_refund_status",
+        "expected_arguments": {
+          "order_id": 3001
+        },
+        "predicted_arguments": {
+          "order_id": 3001
+        },
+        "tool_correct": true,
+        "arguments_correct": true
+      }
+    ]
+  },
+  "agent": {
+    "task_success_rate": 0.0,
+    "resolution_accuracy": 0.0,
+    "escalation_accuracy": 0.0,
+    "total_cases": 8,
+    "details": [
+      {
+        "id": "agent_001",
+        "request": "My payment was deducted but my order was cancelled.",
+        "error": "Operation failed after 3 retries.",
+        "task_success": false,
+        "resolution_correct": false,
+        "escalation_correct": false
+      },
+      {
+        "id": "agent_002",
+        "request": "I cannot log into my account.",
+        "error": "Operation failed after 3 retries.",
+        "task_success": false,
+        "resolution_correct": false,
+        "escalation_correct": false
+      },
+      {
+        "id": "agent_003",
+        "request": "Can I cancel my order after it has shipped?",
+        "error": "Operation failed after 3 retries.",
+        "task_success": false,
+        "resolution_correct": false,
+        "escalation_correct": false
+      },
+      {
+        "id": "agent_004",
+        "request": "My package arrived damaged.",
+        "error": "Operation failed after 3 retries.",
+        "task_success": false,
+        "resolution_correct": false,
+        "escalation_correct": false
+      },
+      {
+        "id": "agent_005",
+        "request": "I was charged twice for my order.",
+        "error": "Operation failed after 3 retries.",
+        "task_success": false,
+        "resolution_correct": false,
+        "escalation_correct": false
+      },
+      {
+        "id": "agent_006",
+        "request": "Someone has taken over my account and changed my email and password.",
+        "error": "Operation failed after 3 retries.",
+        "task_success": false,
+        "resolution_correct": false,
+        "escalation_correct": false
+      },
+      {
+        "id": "agent_007",
+        "request": "I want a refund for an order that is outside the refund policy.",
+        "error": "Operation failed after 3 retries.",
+        "task_success": false,
+        "resolution_correct": false,
+        "escalation_correct": false
+      },
+      {
+        "id": "agent_008",
+        "request": "I have been charged but there is no order in my account.",
+        "error": "Operation failed after 3 retries.",
+        "task_success": false,
+        "resolution_correct": false,
+        "escalation_correct": false
+      }
+    ]
+  },
+  "performance": {
+    "total_requests": 8,
+    "successful_requests": 0,
+    "error_count": 8,
+    "error_rate": 1.0,
+    "latency": {
+      "average_seconds": 8.230467537499976,
+      "min_seconds": 7.981288599999971,
+      "max_seconds": 8.666384799999832,
+      "p95_seconds": 8.666384799999832
+    },
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "total": 0
+    },
+    "estimated_cost": 0.0,
+    "errors": [
+      {
+        "id": "agent_001",
+        "error": "Operation failed after 3 retries."
+      },
+      {
+        "id": "agent_002",
+        "error": "Operation failed after 3 retries."
+      },
+      {
+        "id": "agent_003",
+        "error": "Operation failed after 3 retries."
+      },
+      {
+        "id": "agent_004",
+        "error": "Operation failed after 3 retries."
+      },
+      {
+        "id": "agent_005",
+        "error": "Operation failed after 3 retries."
+      },
+      {
+        "id": "agent_006",
+        "error": "Operation failed after 3 retries."
+      },
+      {
+        "id": "agent_007",
+        "error": "Operation failed after 3 retries."
+      },
+      {
+        "id": "agent_008",
+        "error": "Operation failed after 3 retries."
+      }
+    ],
+    "details": [
+      {
+        "id": "agent_001",
+        "latency_seconds": 8.190625599999748,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "error": "Operation failed after 3 retries."
+      },
+      {
+        "id": "agent_002",
+        "latency_seconds": 8.192227900000034,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "error": "Operation failed after 3 retries."
+      },
+      {
+        "id": "agent_003",
+        "latency_seconds": 8.109958800000186,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "error": "Operation failed after 3 retries."
+      },
+      {
+        "id": "agent_004",
+        "latency_seconds": 8.065607200000159,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "error": "Operation failed after 3 retries."
+      },
+      {
+        "id": "agent_005",
+        "latency_seconds": 7.981288599999971,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "error": "Operation failed after 3 retries."
+      },
+      {
+        "id": "agent_006",
+        "latency_seconds": 8.178273999999874,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "error": "Operation failed after 3 retries."
+      },
+      {
+        "id": "agent_007",
+        "latency_seconds": 8.666384799999832,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "error": "Operation failed after 3 retries."
+      },
+      {
+        "id": "agent_008",
+        "latency_seconds": 8.459373400000004,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "error": "Operation failed after 3 retries."
+      }
+    ]
+  }
+}

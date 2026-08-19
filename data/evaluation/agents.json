@@ -1,0 +1,58 @@
+[
+  {
+    "id": "agent_001",
+    "request": "My payment was deducted but my order was cancelled.",
+    "expected_outcome": "resolve",
+    "expected_resolution": "refund",
+    "expected_escalation": false
+  },
+  {
+    "id": "agent_002",
+    "request": "I cannot log into my account.",
+    "expected_outcome": "resolve",
+    "expected_resolution": "login_assistance",
+    "expected_escalation": false
+  },
+  {
+    "id": "agent_003",
+    "request": "Can I cancel my order after it has shipped?",
+    "expected_outcome": "resolve",
+    "expected_resolution": "order_cancellation_policy",
+    "expected_escalation": false
+  },
+  {
+    "id": "agent_004",
+    "request": "My package arrived damaged.",
+    "expected_outcome": "resolve",
+    "expected_resolution": "damaged_order",
+    "expected_escalation": false
+  },
+  {
+    "id": "agent_005",
+    "request": "I was charged twice for my order.",
+    "expected_outcome": "resolve",
+    "expected_resolution": "duplicate_charge",
+    "expected_escalation": false
+  },
+  {
+    "id": "agent_006",
+    "request": "Someone has taken over my account and changed my email and password.",
+    "expected_outcome": "escalate",
+    "expected_resolution": "account_security",
+    "expected_escalation": true
+  },
+  {
+    "id": "agent_007",
+    "request": "I want a refund for an order that is outside the refund policy.",
+    "expected_outcome": "escalate",
+    "expected_resolution": "refund_exception",
+    "expected_escalation": true
+  },
+  {
+    "id": "agent_008",
+    "request": "I have been charged but there is no order in my account.",
+    "expected_outcome": "escalate",
+    "expected_resolution": "payment_order_mismatch",
+    "expected_escalation": true
+  }
+]

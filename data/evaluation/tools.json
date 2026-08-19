@@ -1,0 +1,62 @@
+[
+  {
+    "id": "tool_001",
+    "request": "What is the current status of order 1001?",
+    "expected_tool": "get_order",
+    "expected_arguments": {
+      "order_id": 1001
+    }
+  },
+  {
+    "id": "tool_002",
+    "request": "Can you check the payment status for order 1002?",
+    "expected_tool": "get_payment_status",
+    "expected_arguments": {
+      "order_id": 1002
+    }
+  },
+  {
+    "id": "tool_003",
+    "request": "Show me my previous support tickets.",
+    "expected_tool": "get_previous_tickets",
+    "expected_arguments": {}
+  },
+  {
+    "id": "tool_004",
+    "request": "Can you check my customer information?",
+    "expected_tool": "get_customer",
+    "expected_arguments": {}
+  },
+  {
+    "id": "tool_005",
+    "request": "Please check the refund status for order 1005.",
+    "expected_tool": "check_refund_status",
+    "expected_arguments": {
+      "order_id": 1005
+    }
+  },
+  {
+    "id": "tool_006",
+    "request": "What does the refund policy say about returns?",
+    "expected_tool": "search_knowledge_base",
+    "expected_arguments": {
+      "query": "refund policy returns"
+    }
+  },
+  {
+    "id": "tool_007",
+    "request": "Look up order 2045 for me.",
+    "expected_tool": "get_order",
+    "expected_arguments": {
+      "order_id": 2045
+    }
+  },
+  {
+    "id": "tool_008",
+    "request": "Check whether order 3001 has been refunded.",
+    "expected_tool": "check_refund_status",
+    "expected_arguments": {
+      "order_id": 3001
+    }
+  }
+]

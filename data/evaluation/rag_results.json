@@ -1,0 +1,158 @@
+{
+  "k": 5,
+  "recall_at_k": 1.0,
+  "mrr": 0.825,
+  "ndcg_at_k": 0.8696164093615606,
+  "details": [
+    {
+      "id": "rag_001",
+      "question": "How long do I have to request a refund?",
+      "expected_source": "refund-policy.md",
+      "retrieved_sources": [
+        "refund-policy.md",
+        "refund-policy.md",
+        "refund-policy.md",
+        "refunds.md",
+        "refunds.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "rag_002",
+      "question": "I was charged twice for my order.",
+      "expected_source": "payments.md",
+      "retrieved_sources": [
+        "payments.md",
+        "payment-failed.md",
+        "payment-policy.md",
+        "payment-policy.md",
+        "shipping.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "rag_003",
+      "question": "My payment failed.",
+      "expected_source": "payment-failed.md",
+      "retrieved_sources": [
+        "payments.md",
+        "payment-failed.md",
+        "payment-policy.md",
+        "payment-failed.md",
+        "payment-failed.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 0.5,
+      "ndcg_at_k": 0.6797310500037655
+    },
+    {
+      "id": "rag_004",
+      "question": "Can I cancel an order after it has shipped?",
+      "expected_source": "cancellation-policy.md",
+      "retrieved_sources": [
+        "cancellation-policy.md",
+        "cancellation-policy.md",
+        "cancellation-policy.md",
+        "cancellation-policy.md",
+        "cancellation-policy.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "rag_005",
+      "question": "I cannot log into my account.",
+      "expected_source": "login-problems.md",
+      "retrieved_sources": [
+        "login-problems.md",
+        "login-problems.md",
+        "login-problems.md",
+        "login-problems.md",
+        "login-problems.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "rag_006",
+      "question": "How long does a card refund take?",
+      "expected_source": "refund-policy.md",
+      "retrieved_sources": [
+        "refund-policy.md",
+        "refund-policy.md",
+        "refunds.md",
+        "refund-policy.md",
+        "refunds.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "ndcg_at_k": 0.9674679834891693
+    },
+    {
+      "id": "rag_007",
+      "question": "What happens if my package arrives damaged?",
+      "expected_source": "return-policy.md",
+      "retrieved_sources": [
+        "shipping.md",
+        "refunds.md",
+        "shipping.md",
+        "return-policy.md",
+        "warranty-policy.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 0.25,
+      "ndcg_at_k": 0.43067655807339306
+    },
+    {
+      "id": "rag_008",
+      "question": "My card was declined during checkout.",
+      "expected_source": "payment-failed.md",
+      "retrieved_sources": [
+        "payment-failed.md",
+        "payments.md",
+        "payment-failed.md",
+        "payment-failed.md",
+        "refunds.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "ndcg_at_k": 0.9060254355346823
+    },
+    {
+      "id": "rag_009",
+      "question": "How can I cancel my order?",
+      "expected_source": "cancellation-policy.md",
+      "retrieved_sources": [
+        "cancellation-policy.md",
+        "cancellation-policy.md",
+        "cancellation-policy.md",
+        "cancellation-policy.md",
+        "return-policy.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 1.0,
+      "ndcg_at_k": 1.0
+    },
+    {
+      "id": "rag_010",
+      "question": "I forgot my password.",
+      "expected_source": "login-problems.md",
+      "retrieved_sources": [
+        "accounts.md",
+        "login-problems.md",
+        "login-problems.md",
+        "accounts.md",
+        "login-problems.md"
+      ],
+      "recall_at_k": 1.0,
+      "reciprocal_rank": 0.5,
+      "ndcg_at_k": 0.7122630665145961
+    }
+  ]
+}

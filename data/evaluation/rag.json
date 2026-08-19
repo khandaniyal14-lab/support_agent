@@ -1,0 +1,52 @@
+[
+  {
+    "id": "rag_001",
+    "question": "How long do I have to request a refund?",
+    "expected_source": "refund-policy.md"
+  },
+  {
+    "id": "rag_002",
+    "question": "I was charged twice for my order.",
+    "expected_source": "payments.md"
+  },
+  {
+    "id": "rag_003",
+    "question": "My payment failed.",
+    "expected_source": "payment-failed.md"
+  },
+  {
+    "id": "rag_004",
+    "question": "Can I cancel an order after it has shipped?",
+    "expected_source": "cancellation-policy.md"
+  },
+  {
+    "id": "rag_005",
+    "question": "I cannot log into my account.",
+    "expected_source": "login-problems.md"
+  },
+  {
+    "id": "rag_006",
+    "question": "How long does a card refund take?",
+    "expected_source": "refund-policy.md"
+  },
+  {
+    "id": "rag_007",
+    "question": "What happens if my package arrives damaged?",
+    "expected_source": "return-policy.md"
+  },
+  {
+    "id": "rag_008",
+    "question": "My card was declined during checkout.",
+    "expected_source": "payment-failed.md"
+  },
+  {
+    "id": "rag_009",
+    "question": "How can I cancel my order?",
+    "expected_source": "cancellation-policy.md"
+  },
+  {
+    "id": "rag_010",
+    "question": "I forgot my password.",
+    "expected_source": "login-problems.md"
+  }
+]

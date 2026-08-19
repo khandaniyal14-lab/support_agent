@@ -1,0 +1,111 @@
+{
+  "tool_selection_accuracy": 0.875,
+  "tool_argument_accuracy": 0.5,
+  "total_cases": 8,
+  "details": [
+    {
+      "id": "tool_001",
+      "request": "What is the current status of order 1001?",
+      "expected_tool": "get_order",
+      "predicted_tool": "get_payment_status",
+      "expected_arguments": {
+        "order_id": 1001
+      },
+      "predicted_arguments": {
+        "order_id": "1001"
+      },
+      "tool_correct": false,
+      "arguments_correct": false
+    },
+    {
+      "id": "tool_002",
+      "request": "Can you check the payment status for order 1002?",
+      "expected_tool": "get_payment_status",
+      "predicted_tool": "get_payment_status",
+      "expected_arguments": {
+        "order_id": 1002
+      },
+      "predicted_arguments": {
+        "order_id": "1002"
+      },
+      "tool_correct": true,
+      "arguments_correct": false
+    },
+    {
+      "id": "tool_003",
+      "request": "Show me my previous support tickets.",
+      "expected_tool": "get_previous_tickets",
+      "predicted_tool": "get_previous_tickets",
+      "expected_arguments": {},
+      "predicted_arguments": {},
+      "tool_correct": true,
+      "arguments_correct": true
+    },
+    {
+      "id": "tool_004",
+      "request": "Can you check my customer information?",
+      "expected_tool": "get_customer",
+      "predicted_tool": "get_customer",
+      "expected_arguments": {},
+      "predicted_arguments": {},
+      "tool_correct": true,
+      "arguments_correct": true
+    },
+    {
+      "id": "tool_005",
+      "request": "Please check the refund status for order 1005.",
+      "expected_tool": "check_refund_status",
+      "predicted_tool": "check_refund_status",
+      "expected_arguments": {
+        "order_id": 1005
+      },
+      "predicted_arguments": {
+        "order_id": "1005"
+      },
+      "tool_correct": true,
+      "arguments_correct": false
+    },
+    {
+      "id": "tool_006",
+      "request": "What does the refund policy say about returns?",
+      "expected_tool": "search_knowledge_base",
+      "predicted_tool": "search_knowledge_base",
+      "expected_arguments": {
+        "query": "refund policy returns"
+      },
+      "predicted_arguments": {
+        "query": "refund policy returns"
+      },
+      "tool_correct": true,
+      "arguments_correct": true
+    },
+    {
+      "id": "tool_007",
+      "request": "Look up order 2045 for me.",
+      "expected_tool": "get_order",
+      "predicted_tool": "get_order",
+      "expected_arguments": {
+        "order_id": 2045
+      },
+      "predicted_arguments": {
+        "order_id": "2045"
+      },
+      "tool_correct": true,
+      "arguments_correct": false
+    },
+    {
+      "id": "tool_008",
+      "request": "Check whether order 3001 has been refunded.",
+      "expected_tool": "check_refund_status",
+      "predicted_tool": "check_refund_status",
+      "expected_arguments": {
+        "order_id": 3001
+      },
+      "predicted_arguments": {
+        "order_id": 3001
+      },
+      "tool_correct": true,
+      "arguments_correct": true
+    }
+  ]
+}

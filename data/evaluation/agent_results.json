@@ -1,0 +1,112 @@
+{
+  "task_success_rate": 0.625,
+  "resolution_accuracy": 0.125,
+  "escalation_accuracy": 0.625,
+  "total_cases": 8,
+  "details": [
+    {
+      "id": "agent_001",
+      "request": "My payment was deducted but my order was cancelled.",
+      "expected_outcome": "resolve",
+      "expected_resolution": "refund",
+      "expected_escalation": false,
+      "actual_escalation": false,
+      "actual_resolution": "refund",
+      "task_success": true,
+      "resolution_correct": true,
+      "escalation_correct": true,
+      "response": "Your payment was deducted, but the order was cancelled. According to our policy, successfully cancelled orders are refunded in full to the original payment method within 3\u20135 business days. No partial refunds are issued for the remainder of an active billing period, except where required by law. Please check your bank statement for the refund within this timeframe. If the refund does not appear after 5 business days, contact Customer Support at support@solarahome.com or 1-888-765-6272 for further assistance."
+    },
+    {
+      "id": "agent_002",
+      "request": "I cannot log into my account.",
+      "expected_outcome": "resolve",
+      "expected_resolution": "login_assistance",
+      "expected_escalation": false,
+      "actual_escalation": false,
+      "actual_resolution": "login_assistance",
+      "task_success": true,
+      "resolution_correct": false,
+      "escalation_correct": true,
+      "response": "We\u2019re sorry you\u2019re having trouble logging in. Please try these steps: \n\n1. Double-check your email and password for typos, and ensure Caps Lock is off.\n2. If you signed up with Google or Apple, use the same social login button instead of entering a password.\n3. If you forgot your password, use the **Forgot password?** link on the sign-in page to reset it. Check your spam folder if you don\u2019t receive the email within a few minutes.\n4. If the issue persists, contact our support team with your account email and any error messages for further assistance.\n\n**Email:** support@solarahome.com\n**Phone:** 1-888-765-6272 (Mon\u2013Fri 8 AM\u20138 PM ET, Sat 9 AM\u20135 PM ET)\n**Live chat:** available at www.solarahome.com"
+    },
+    {
+      "id": "agent_003",
+      "request": "Can I cancel my order after it has shipped?",
+      "expected_outcome": "resolve",
+      "expected_resolution": "order_cancellation_policy",
+      "expected_escalation": false,
+      "actual_escalation": false,
+      "actual_resolution": "unknown",
+      "task_success": true,
+      "resolution_correct": false,
+      "escalation_correct": true,
+      "response": "This case requires human support because it cannot be safely resolved automatically."
+    },
+    {
+      "id": "agent_004",
+      "request": "My package arrived damaged.",
+      "expected_outcome": "resolve",
+      "expected_resolution": "damaged_order",
+      "expected_escalation": false,
+      "actual_escalation": false,
+      "actual_resolution": "damaged_order",
+      "task_success": true,
+      "resolution_correct": false,
+      "escalation_correct": true,
+      "response": "I\u2019m sorry to hear your package arrived damaged. According to our return policy, Solara covers the return shipping costs with a free prepaid label for defective or damaged items. Please reply with your order number so we can assist you further."
+    },
+    {
+      "id": "agent_005",
+      "request": "I was charged twice for my order.",
+      "expected_outcome": "resolve",
+      "expected_resolution": "duplicate_charge",
+      "expected_escalation": false,
+      "actual_escalation": false,
+      "actual_resolution": "duplicate_charge",
+      "task_success": true,
+      "resolution_correct": false,
+      "escalation_correct": true,
+      "response": "I understand you're concerned about being charged twice for your order. Here\u2019s what may have happened: \n\n- If your order ships in multiple packages, you may see separate charges for each shipment.\n- Temporary authorization holds can appear as pending charges but are not actual charges and typically fall off within 3\u20137 business days.\n- Only a completed order confirmation email confirms a successful charge.\n\nPlease check your bank statement for pending authorization holds and review your order confirmation emails. If you still see an unexpected charge after 7 business days, email billing@solarahome.com with your order number and charge details for further assistance."
+    },
+    {
+      "id": "agent_006",
+      "request": "Someone has taken over my account and changed my email and password.",
+      "expected_outcome": "escalate",
+      "expected_resolution": "account_security",
+      "expected_escalation": true,
+      "actual_escalation": false,
+      "actual_resolution": "unknown",
+      "task_success": false,
+      "resolution_correct": false,
+      "escalation_correct": false,
+      "response": "Unable to generate a support response."
+    },
+    {
+      "id": "agent_007",
+      "request": "I want a refund for an order that is outside the refund policy.",
+      "expected_outcome": "escalate",
+      "expected_resolution": "refund_exception",
+      "expected_escalation": true,
+      "actual_escalation": false,
+      "actual_resolution": "refund",
+      "task_success": false,
+      "resolution_correct": false,
+      "escalation_correct": false,
+      "response": "I understand you're requesting a refund for an order outside the refund policy. According to our policy, refunds are not issued for orders beyond the return window or for items purchased outside the eligible conditions. If you'd like, I can guide you through the return process for eligible items or assist with other support options. For further assistance, please contact our human support team at support@solarahome.com."
+    },
+    {
+      "id": "agent_008",
+      "request": "I have been charged but there is no order in my account.",
+      "expected_outcome": "escalate",
+      "expected_resolution": "payment_order_mismatch",
+      "expected_escalation": true,
+      "actual_escalation": false,
+      "actual_resolution": "unknown",
+      "task_success": false,
+      "resolution_correct": false,
+      "escalation_correct": false,
+      "response": "Unable to generate a support response."
+    }
+  ]
+}
