@@ -3,8 +3,8 @@ import sys
 from pathlib import Path
 
 from app.agents.graph.schemas import TicketAnalysis
-from app.ai.llm import LLMService
 from app.agents.prompt import CLASSIFICATION_PROMPT
+from app.ai.llm import LLMService
 from app.evaluation.quality_gate import (
     check_classification_quality,
 )
