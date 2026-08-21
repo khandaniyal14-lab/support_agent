@@ -71,6 +71,7 @@ jobs:
 
     env:
       DATABASE_URL: postgresql://postgres:postgres@localhost:5432/ai_support_agent
+      CHECKPOINT_DATABASE_URL: postgresql://postgres:postgres@localhost:5432/ai_support_agent
       REDIS_URL: redis://localhost:6379/0
       QDRANT_URL: http://localhost:6333
       MISTRAL_API_KEY: test-key
