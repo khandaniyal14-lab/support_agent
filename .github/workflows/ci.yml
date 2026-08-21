@@ -74,7 +74,7 @@ jobs:
       CHECKPOINT_DATABASE_URL: postgresql://postgres:postgres@localhost:5432/ai_support_agent
       REDIS_URL: redis://localhost:6379/0
       QDRANT_URL: http://localhost:6333
-      MISTRAL_API_KEY: test-key
+      MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
       MISTRAL_MODEL: mistral-small-latest
       LLM_TEMPERATURE: "0.0"
       LLM_MAX_TOKENS: "1000"
