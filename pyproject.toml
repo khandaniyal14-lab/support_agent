@@ -3,7 +3,7 @@ name = "ai-support-agent"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.12"
 dependencies = [
     "alembic>=1.19.1",
     "fastapi>=0.141.1",
@@ -27,6 +27,7 @@ dependencies = [
     "scikit-learn>=1.9.0",
     "sentence-transformers>=5.7.0",
     "sqlalchemy>=2.0.52",
+    "torch>=2.13.0",
     "uvicorn>=0.52.2",
 ]
 
@@ -40,6 +41,14 @@ dev = [
 [tool.pytest.ini_options]
 pythonpath = ["."]
 testpaths = ["tests"]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
 
 [tool.ruff]
 line-length = 79

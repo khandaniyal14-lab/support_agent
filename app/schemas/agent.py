@@ -16,3 +16,9 @@ class AgentRequest(BaseModel):
 
     ticket_id: int | None = None
 
+
+class AgentResponse(BaseModel):
+
+    request: str
+    conversation_id: str
+    response: str
